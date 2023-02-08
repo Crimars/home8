@@ -7,38 +7,53 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int num1 = nInt();
-        int num2 = nInt();
-        char operation = operat();
+        int num1 = enterInt();
+        int num2 = enterInt();
+        char operation = enterOperat();
+        int result = calc(num1, num2, operation);
+        //System.out.println("результат " + result);
     }
 
-    public static int nInt() {
+    public static int enterInt() {
+        System.out.println("введите число:");
+        int num = 0;
         if (sc.hasNextInt()) {
-            int num1 = sc.nextInt();
-            System.out.println("ввели число " + num1);
+            num = sc.nextInt();
+            //System.out.println("ввели число " + num);
         } else {
             System.out.println("это не число!");
+            sc.next();
+            num = enterInt();
         }
-        return 0;
+        return num;
     }
 
-    public static char operat() {
+    public static char enterOperat() {
+        System.out.println("введите операцию:");
+        char operation;
         if (sc.hasNext()) {
-            char operation = sc.next().charAt(0);
+            operation = sc.next().charAt(0);
         } else {
             System.out.println("не операция");
-            char operation = operat();
+            operation = enterOperat();
         }
-        return 0;
+        return operation;
     }
 
+    public static int calc(int num1, int num2, char operation) {
+        int result = 0;
+        if (operation == '+') {
+            System.out.println("результат:" + (num1 + num2));
+        } else if (operation == '-') {
+            System.out.println("результат:" + (num1 - num2));
+        } else if (operation == '*') {
+            System.out.println("результат:" + (num1 * num2));
+        } else if (operation == '/') {
+            System.out.println("результат:" + (num1 / num2));
+        } else {
+            System.out.println("неверная операция");}
 
-
-
-
-            public static int calc(int num1, int num2, char operation){
-
-                if (operation == '+') {
+               /* if (operation == '+') {
                     System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
                 } else if (operation == '-') {
                     System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
@@ -48,11 +63,12 @@ public class Main {
                     System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
                 } else {
                     System.out.println("неверная операция");
-                }
+                }*/
 
-return num1;
-            }
+            return result;
         }
+    }
+
 
 
 
