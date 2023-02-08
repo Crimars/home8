@@ -53,19 +53,7 @@ public class Main {
         } else {
             System.out.println("неверная операция");}
 
-               /* if (operation == '+') {
-                    System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
-                } else if (operation == '-') {
-                    System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
-                } else if (operation == '*') {
-                    System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
-                } else if (operation == '/') {
-                    System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
-                } else {
-                    System.out.println("неверная операция");
-                }*/
-
-            return result;
+           return result;
         }
     }
 
